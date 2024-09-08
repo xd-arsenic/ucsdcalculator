@@ -1,0 +1,1191 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hide all steps by default */
+.step {
+    display: none;
+}
+
+/* Show only the active step */
+.step.active {
+    display: block;
+}
+
+/* Disabled state for the sidebar links */
+.sidebar li.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+/* Ensure html and body take up full height without causing overflow */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent extra scroll */
+}
+
+/* Ensure the container stretches exactly to the full page height */
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* Full viewport height without scrolling */
+    box-sizing: border-box; /* Ensure padding doesn't add extra size */
+    overflow: hidden; /* Prevent internal scroll if necessary */
+}
+
+/* Make sure no extra margins on other elements push beyond the page height */
+.top-bar {
+    margin: 0;
+    padding: 1.5em 0;
+    box-sizing: border-box;
+}
+
+/* Remove unnecessary margin from body or other elements that might cause overflow */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Ensure the container stretches to the full page height */
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Default button styling (from previous example) */
+.option-buttons button {
+    padding: 20px 30px;
+    font-size: 1.5em;
+    background-color: #f4f4f4;
+    border: 2px solid #bbb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-buttons button:hover {
+    background-color: #ddd;
+    border-color: #999;
+}
+
+/* Styling for the selected college */
+.option-buttons button.selected {
+    background-color: #87ceeb;
+    color: white;
+    border-color: #4a90e2;
+}
+
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #eaeaea;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ddd;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar li:hover, .sidebar li.active {
+    background-color: #cfcfcf;
+}
+
+.sidebar li input {
+    margin-right: 10px;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* College and other selection buttons */
+.option-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.option-buttons button {
+    padding: 20px 30px;
+    font-size: 1.5em;
+    background-color: #f4f4f4;
+    border: 2px solid #bbb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-buttons button:hover {
+    background-color: #ddd;
+    border-color: #999;
+}
+
+/* Styling for the selected college */
+.option-buttons button.selected .Muir:focus{
+    background-color: green !important;
+}
+/* Back and Next buttons */
+.back-next-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+button.back, button.next {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.back:hover, button.next:hover {
+    background-color: #ccc;
+}
+
+button.back {
+    background-color: #ccc;
+}
+
+button.next {
+    background-color: #87ceeb;
+    color: #fff;
+}
+
+button.next:hover {
+    background-color: #C69214;
+}
+
+/* CSS for greying out disabled sidebar items */
+.disabled {
+    color: grey;               /* Make text grey */
+    cursor: not-allowed;       /* Change cursor to 'not allowed' when hovering */
+    opacity: 0.6;              /* Reduce opacity */
+}
+
+/* Optional hover effect to prevent pointer changes on disabled items */
+.disabled:hover {
+    cursor: not-allowed;       /* Ensure 'not allowed' cursor on hover */
+}
+
+.option-buttons button.selected {
+    background-color: #FFCD00;
+    color: white;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+}
+
+h2 {
+    font-weight: 500;
+    color: #333;
+}
+
+.option-buttons button {
+    background-color: #182B49;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.option-buttons button:hover {
+    background-color: #357ABD;
+    transform: translateY(-3px);
+}
+
+.option-buttons button:active {
+    transform: translateY(0px);
+}
+
+.sidebar {
+    background-color: #2C3E50;
+    color: #fff;
+    width: 250px;
+    padding: 20px;
+    margin-top: 0em;
+}
+
+.sidebar li {
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    background-color: #34495E;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar li:hover {
+    background-color: #1ABC9C;
+}
+
+.option-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+button.back, button.next {
+    background-color: #00629B;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.back {
+    background-color: #747678;
+}
+
+button.back:hover, button.next:hover {
+    background-color: #C69214;
+}
+
+.college-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between buttons */
+}
+
+.college-container button {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+.last-college {
+    flex-basis: 100%; /* Make it take up a full row */
+    text-align: center; /* Center the content */
+    justify-content: center;
+}
+
+
+.sidebar-item.selected {
+    background-color: #FFCD00;  /* Highlighted color */
+    color: #fff;                /* Text color */
+    font-weight: bold;          /* Make the text bold */
+}
+
+.sidebar-item {
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    background-color: #34495E;  /* Default sidebar item background */
+    color: #fff;
+    border-radius: 0px !important;
+    cursor: pointer;
+}
+
+.sidebar-item:hover {
+    background-color: #1ABC9C;  /* Hover effect for inactive items */
+}
+
+.sidebar-item.disabled {
+    pointer-events: none;
+}
+
+/* Top Bar Styling */
+.top-bar {
+    width: 100%;
+    background: inherit; /* Add gradient for a modern look */
+    color: black;
+    padding: 1.5em 0; /* Increase padding for better spacing */
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers text vertically */
+    height: em;;
+}
+
+.top-bar h1 {
+    margin: 0;
+    font-size: 2em; /* Larger font size for the title */
+    font-weight: bold; /* Make the text bolder */
+    color: #333;
+}
+
+/* Adding space between header and content */
+.container {
+    margin-top: 0em; /* Add margin to create space between the header and the main content */
+}
+
+
+/* Sidebar Heading Styling */
+.sidebar-heading {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #FFCD00; /* Use a highlight color for headings */
+    padding: 10px 0;
+    border-bottom: 2px solid #FFCD00; /* Optional underline */
+}
+
+/* Sidebar Items */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar li:hover, .sidebar li.active {
+    background-color: #1ABC9C;
+}
+
+
+/* Sidebar container */
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Sidebar heading */
+.sidebar-heading {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #333;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Sidebar items */
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #555;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.sidebar-item i {
+    margin-right: 10px;
+    color: #6c757d;
+}
+
+.sidebar-item:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.sidebar-item:hover i {
+    color: white;
+}
+
+/* Active state for selected items */
+.sidebar-item.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.sidebar-item.active i {
+    color: white;
+}
+
+/* Add soft shadow for better visual appeal */
+.sidebar {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Styling for spacing between sections */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Container for the whole layout */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Right Section: contains both top bar and main content */
+.right-section {
+    flex: 1; /* Take up the remaining width */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Top Bar Styling, limited to the right section */
+.top-bar {
+    width: 100%; /* Full width of the right section */
+    background-color: #f5f7fa;
+    color: black;
+    padding: 1.5em 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), #f5f7fa;
+}
+
+/* Right Section: contains both top bar and main content */
+.right-section {
+    flex: 1; /* Take up the remaining space next to the sidebar */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    height: 100vh;
+    max-width: 900px; /* Limit the width of the right section */
+    margin: 0 auto; /* Center the right section on the page */
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), #f5f7fa;
+    width: 100%;
+}
+
+/* Right Section: contains both top bar and main content */
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure the top bar stays at the top */
+    align-items: center; /* Center the content horizontally */
+    padding: 20px;
+    max-width: 1000px; /* Adjust the width to your desired limit */
+    margin: 0 auto; /* Center the section */
+    width: 100%; /* Ensure the section takes the available width */
+}
+
+/* Main Content Area */
+.main-content {
+    width: 100%; /* Take up full width inside the right section */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f7fa; /* Background for the main content */
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%; /* Make sure the container fits the viewport */
+}
+
+/* Ensure no margin or padding on html and body */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensure container starts from the top */
+.container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 0; /* Remove any top margin */
+    position: relative; /* Ensure it starts from the top */
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f7fa;
+    margin-top: 0; /* Ensure there's no top margin */
+}
+
+/* Global reset to remove default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure no margin or padding on html and body */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure the container starts from the top and takes full height */
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 0; /* Ensure it starts from the top of the viewport */
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f7fa;
+}
+
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Right Section */
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f5f7fa; /* Ensure background matches the main content */
+    padding: 0; /* Remove any extra padding */
+}
+
+/* Main Content */
+.main-content {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Transparent if you want the right-section background */
+}
+
+/* Remove any margin that might be around the container */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the sidebar title */
+.sidebar-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* You can adjust the color to match your theme */
+    width: auto;
+}
+
+/* Sidebar Title with Futura or similar font */
+.sidebar-title {
+    font-family: 'Montserrat', sans-serif; /* Use Futura if you have it, else Montserrat */
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* You can adjust the color to match your theme */
+}
+
+/* Main Content Area */
+.main-content {
+    width: 100%;
+    height: 100vh; /* Full viewport height to allow vertical centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    text-align: center;
+    background-color: #f5f7fa;
+}
+
+/* Health Waiver Heading */
+.main-content h2 {
+    font-size: 2.5em; /* Increase heading size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #34495E; /* Darker color for visibility */
+}
+
+/* Health Waiver Subheading */
+.main-content p {
+    font-size: 1.5em; /* Increase subheading size */
+    color: #555; /* Subtle contrast with the heading */
+    margin-bottom: 20px;
+}
+
+/* Option Buttons */
+.option-buttons button {
+    font-size: 1.5em; /* Increase button text size */
+    padding: 15px 25px; /* Increase padding for bigger buttons */
+    margin: 10px; /* Space between the buttons */
+    background-color: #34495E; /* Dark button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* Back and Next Buttons */
+.back-next-buttons button {
+    font-size: 1.5em; /* Increase back/next button size */
+    padding: 15px 25px;
+    margin: 10px;
+}
+
+button.back {
+    background-color: #7f8c8d; /* Back button color */
+    color: white;
+}
+
+.option-buttons {
+    display: flex;
+    justify-content: center; /* Horizontally center the buttons */
+    gap: 20px; /* Add space between the buttons */
+    margin-bottom: 20px;
+}
+
+/* Individual Buttons */
+.option-buttons button {
+    font-size: 1.5em;
+    padding: 15px 25px;
+    background-color: #34495E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Back and Next Buttons Container */
+.back-next-buttons {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 20px; /* Adds space between the buttons */
+    margin-top: 20px;
+}
+
+/* Back and Next Buttons */
+.back-next-buttons button {
+    font-size: 1.5em;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Costs Results Section */
+.costs-results {
+    font-size: 1.2em; /* Increase base font size */
+    line-height: 1.6; /* Increase line spacing for better readability */
+    text-align: center; /* Ensure content is centered */
+    margin-bottom: 20px;
+}
+
+/* Heading (Costs Results) */
+.costs-results h2 {
+    font-size: 2.5em; /* Increase heading size */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Quarter Sections (Fall, Winter, Spring) */
+.costs-results .quarter {
+    margin-bottom: 20px; /* Space between each quarter section */
+    font-size: 1.4em; /* Increase size of individual quarter details */
+}
+
+/* Total Year Cost Section */
+.costs-results .total-year-cost {
+    margin-top: 20px;
+    font-size: 1.6em; /* Make the total cost larger */
+    font-weight: bold;
+}
+
+/* Back and Next Buttons */
+.back-next-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.back-next-buttons button {
+    font-size: 1.5em; /* Increase button text size */
+    padding: 15px 25px; /* Increase padding */
+    margin: 0 10px; /* Add space between buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.back {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+button.next {
+    background-color: #007bff;
+    color: white;
+}
+
+button.back:hover, button.next:hover {
+    background-color: #2C3E50;
+}
+
+/* Main Content Area */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Financial Aid Table Styling */
+.financial-aid-table {
+    width: 100%;
+    max-width: 700px; /* Set a max width for the table */
+    margin: 20px 0;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* Table Header */
+.financial-aid-table th {
+    font-size: 1.5em; /* Larger header font */
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+}
+
+/* Table Body */
+.financial-aid-table td {
+    font-size: 1.2em; /* Larger cell font */
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Input fields in table */
+.financial-aid-table input[type="text"] {
+    width: 100px; /* Adjust the width of the input boxes */
+    padding: 5px;
+    font-size: 1em;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Back and Next Buttons */
+.back-next-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.back-next-buttons button {
+    font-size: 1.5em;
+    padding: 15px 25px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.back {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+button.next {
+    background-color: #00629B;
+    color: white;
+}
+
+button.back:hover, button.next:hover {
+    background-color: #2C3E50;
+}
+
+/* Final Results Section */
+.final-results {
+    text-align: center;
+    font-size: 1.2em; /* Increase base font size */
+    line-height: 1.8; /* Add more space between lines */
+    margin-bottom: 30px;
+}
+
+/* Heading Styling */
+.final-results h2 {
+    font-size: 2.5em; /* Larger heading size */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Quarter Section Styling */
+.final-results .quarter {
+    margin-bottom: 30px; /* Space between each quarter */
+    font-size: 1.4em; /* Increase size of quarter sections */
+}
+
+/* Total Year Cost Styling */
+.final-results .total-year-cost {
+    margin-top: 30px;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    font-size: 1.2em;
+    color: #7f8c8d; /* Subtle color */
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ccc; /* Light border to separate footer */
+}
+
+/* Footer Links Styling */
+.footer a {
+    color: #007bff; /* UCSD Blue color for the email link */
+    text-decoration: none;
+}
+
+/* Hover effect for the email link */
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    font-size: 1em; /* Smaller font size */
+    color: #7f8c8d; /* Subtle color */
+    padding: 10px; /* Less padding */
+    border-top: 1px solid #ccc; /* Light border */
+    margin-top: 20px; /* Add a bit of space from the content */
+    flex-shrink: 0; /* Ensures the footer does not shrink */
+}
+
+/* Footer Links Styling */
+.footer a {
+    color: #007bff; /* UCSD Blue color for the email link */
+    text-decoration: none;
+}
+
+/* Hover effect for the email link */
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This pushes the footer to the bottom */
+    min-height: 100vh; /* Ensure the content takes full viewport height */
+    padding: 20px;
+    width: 100%;
+}
+
+/* Main Layout to take full height of the page */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the main content vertically */
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    padding: 20px;
+    position: relative;
+    margin-top: -3%;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    font-size: 1em;
+    color: #7f8c8d; /* Subtle color */
+    padding: 10px;
+    padding-bottom: 0px;
+    border-top: 1px solid #ccc; /* Light border */
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Ensure the footer spans the entire width */
+}
+
+/* Footer Links Styling */
+.footer a {
+    color: #007bff; /* UCSD Blue color for the email link */
+    text-decoration: none;
+}
+
+/* Hover effect for the email link */
+.footer a:hover {
+    text-decoration: underline;
+}
+/* General footer styling for desktop */
+.footer {
+    text-align: center;
+    font-size: 1em; /* Default font size */
+    color: #7f8c8d;
+    padding: 10px;
+    padding-bottom: 0px;
+    border-top: 1px solid #ccc;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Footer links */
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.announcment {
+    display: none;
+}
+
+/* Hide Sidebar on Mobile (screen width below 768px) */
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hide the sidebar */
+    }
+    
+    /* Adjust main content to take full width when sidebar is hidden */
+    .main-content {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    /* Stack option buttons with more spacing */
+    .option-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Adds spacing between buttons */
+    }
+
+    /* Adjust Back and Next Buttons for mobile */
+    .back-next-buttons {
+        display: flex;
+        justify-content: space-between; /* Ensure buttons stay apart */
+        width: 100%; /* Ensure they don't shrink */
+        max-width: 300px; /* Set a max width for smaller screens */
+        margin: 20px auto; /* Add margin to space them properly */
+    }
+
+    /* Footer adjustments for mobile */
+    .footer {
+        font-size: 5px; /* Decrease font size */
+        padding-bottom: -50px;
+        margin-bottom: -27px;
+    }
+
+    .announcment{
+        display: block;
+    }
+}
+
+/* Popup Styling */
+.mobile-popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 9999; /* Ensure it appears above all other elements */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup content box */
+.mobile-popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+}
+
+/* OK Button */
+.mobile-popup-content button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mobile-popup-content button:hover {
+    background-color: #0056b3;
+}
+
+

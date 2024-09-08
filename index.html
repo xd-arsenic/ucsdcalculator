@@ -1,1 +1,354 @@
-<h1> will be up by tonight!</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCSD Calculator</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your external CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    
+    
+
+    <div class="container">
+        <!-- Sidebar and main content follow here -->
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2 class="sidebar-title">UCSD Costs and Aid Calculator</h2>
+            <ul>
+                <!-- Costs Section -->
+                <li class="sidebar-heading">Costs</li>
+                <li class="sidebar-item" onclick="handleSidebarClick(1)">Living Status</li>
+                <li class="sidebar-item sidebar-item-residence" onclick="handleSidebarClick(3)">Residence Type</li>
+                <li class="sidebar-item sidebar-item-room" onclick="handleSidebarClick(4)">Room Type</li>
+                <li class="sidebar-item" onclick="handleSidebarClick(5)">Dining Plan</li>
+                <li class="sidebar-item" onclick="handleSidebarClick(6)">California Residency</li>
+                <li class="sidebar-item" onclick="handleSidebarClick(7)">First Year Student</li>
+                <li class="sidebar-item" onclick="handleSidebarClick(8)">Health Waiver</li>
+                <li class="sidebar-item" onclick="handleSidebarClick(9)">College</li>
+                <li class="sidebar-item" onclick="handleSidebarClick(10)">Entrance Year</li>
+                <li class="sidebar-item" onclick="handleSidebarClick(11)">Costs Results</li>
+        
+                <!-- Financial Aid Section -->
+                <li class="sidebar-heading">Financial Aid</li>
+                <li class="sidebar-item" onclick="handleSidebarClick(12)">Enter Financial Aid</li>
+        
+                <!-- Final Results Section -->
+                <li class="sidebar-heading">Final Results</li>
+                <li class="sidebar-item" onclick="handleSidebarClick(13)">Final Results</li>
+            </ul>
+        </div>
+        
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <div class="announcment"> 
+                <a>If you are on your phone, this probably won't work. Sorry, I will update the page soon!</a>
+            </div>
+                <!-- Step 1: Living Status -->
+            <div class="step" id="step1">
+                <h2>Living Status</h2>
+                <div class="option-buttons living-status">
+                    <button onclick="selectLivingStatus('on')">On-Campus</button>
+                    <button onclick="selectLivingStatus('off')">Off-Campus</button>
+                </div>
+                <div class="back-next-buttons">
+                    <button class="next" onclick="nextStep()">Next</button>
+                </div>
+            </div>
+
+
+            <!-- Step 2: $450 Deposit (only for On-Campus) -->
+            <div class="step" id="step2">
+                <h2>Have You Paid the $450 Deposit?</h2>
+                <div class="option-buttons deposit-buttons">
+                    <button onclick="selectDepositStatus('yes')">Yes</button>
+                    <button onclick="selectDepositStatus('no')">No</button>
+                </div>
+                <div class="back-next-buttons">
+                    <button class="back" onclick="prevStep()">Back</button>
+                    <button class="next" onclick="nextStep()">Next</button>
+                </div>
+            </div>
+
+
+            <!-- Step 2: Residence Type -->
+            <div class="step" id="step3">
+                <h2>Select Your Residence Type</h2>
+                <h3>Sorry, will be adding transfer student functionalities, including being able to select Pepper Canyon West.</h3>
+                <div class="option-buttons">
+                    <button onclick="selectResidenceType('Residence Hall')">Residence Hall</button>
+                    <button onclick="selectResidenceType('Apartment')">Apartment</button>
+                </div>
+                <div class="back-next-buttons">
+                    <button class="back" onclick="prevStep()">Back</button>
+                    <button class="next" onclick="nextStep()">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Room Type -->
+            <div class="step" id="step4">
+                <h2>Select Your Room Type</h2>
+                <div class="option-buttons">
+                    <button onclick="selectRoomType('Single')">Single</button>
+                    <button onclick="selectRoomType('Double')">Double</button>
+                    <button onclick="selectRoomType('Triple')">Triple</button>
+                </div>
+                <div class="back-next-buttons">
+                    <button class="back" onclick="prevStep()">Back</button>
+                    <button class="next" onclick="nextStep()">Next</button>
+                </div>
+            </div>
+
+
+            <!-- Step 4: Dining Plan -->
+            <div class="step" id="step5">
+                <h2>Select Your Dining Plan</h2>
+                <h3>Select the dining plan you have selected in your portal.</h3>
+                <div class="option-buttons">
+                    <button onclick="selectDiningPlan('Sun God Blue')">Sun God Blue</button>
+                    <button onclick="selectDiningPlan('Sun God Gold')">Sun God Gold</button>
+                    <button onclick="selectDiningPlan('Triton')">Triton</button>
+                    <button onclick="selectDiningPlan('Triton Blue')">Triton Blue</button>
+                    <button onclick="selectDiningPlan('Triton Gold')">Triton Gold</button>
+                    <button onclick="selectDiningPlan('No Plan')">No Plan</button>
+                </div>
+                <div class="back-next-buttons">
+                    <button class="back" onclick="prevStep()">Back</button>
+                    <button class="next" onclick="nextStep()">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 5: California Residency -->
+            <div class="step" id="step6">
+                <h2>California Residency</h2>
+                <h3>Select yes if you qualify as a california resident per university guidlines. Selecting no will charge you non-resident tuition.</h3><br>
+                <div class="option-buttons">
+                    <button onclick="selectResidencyStatus('yes')">Yes</button>
+                    <button onclick="selectResidencyStatus('no')">No</button>
+                </div>
+                <div class="back-next-buttons">
+                    <button class="back" onclick="prevStep()">Back</button>
+                    <button class="next" onclick="nextStep()">Next</button>
+                </div>
+            </div>
+
+            <!-- Update the step numbers for the remaining steps -->
+
+            <!-- Step 7: First Year Student -->
+            <div id="step7" class="step">
+                <h2>Are You a First-Year Student?</h2>
+                <h3>If you are a first-year transfer student, also select yes.</h3>
+                <div class="option-buttons">
+                    <button onclick="selectFirstYear('yes')">Yes</button>
+                    <button onclick="selectFirstYear('no')">No</button>
+                </div>
+                <div class="back-next-buttons">
+                    <button class="back" onclick="prevStep()">Back</button>
+                    <button class="next" onclick="nextStep()">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 5: Health Waiver -->
+            <div class="step" id="step8">
+                <h2>Health Waiver</h2>
+                <h3>Will you submit a health waiver? This will remove the UCSD Ship Charge.</h3><br>
+                <div class="option-buttons">
+                    <button onclick="selectHealthWaiver('yes')">Yes</button>
+                    <button onclick="selectHealthWaiver('no')">No</button>
+                </div>
+                <div class="back-next-buttons">
+                    <button class="back" onclick="prevStep()">Back</button>
+                    <button class="next" onclick="nextStep()">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 6: College -->
+            <div class="step" id="step9">
+                <h2>Select Your College</h2>
+                <h3>Select the college you were admitted to, not where you will live if you are living on-campus.</h3>
+                <div class="option-buttons">
+                    <button onclick="selectCollege('Muir')">Muir</button>
+                    <button onclick="selectCollege('Revelle')">Revelle</button>
+                    <button onclick="selectCollege('Thurgood Marshall')">Thurgood Marshall</button>
+                    <button onclick="selectCollege('Warren')">Warren</button>
+                    <button onclick="selectCollege('Eleanor Roosevelt')">Eleanor Roosevelt</button>
+                    <button onclick="selectCollege('Sixth')">Sixth</button>
+                    <button class="last-college" onclick="selectCollege('Seventh')">Seventh</button>
+                </div>
+                <div class="back-next-buttons">
+                    <button class="back" onclick="prevStep()">Back</button>
+                    <button class="next" onclick="nextStep()">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 7: Entrance Year -->
+            <div class="step" id="step10">
+                <h2>Select Your Entrance Year</h2>
+                <div class="option-buttons">
+                    <button onclick="selectEntranceYear(2024)">2024</button>
+                    <button onclick="selectEntranceYear(2023)">2023</button>
+                    <button onclick="selectEntranceYear(2022)">2022</button>
+                    <button onclick="selectEntranceYear(2021)">2021 or before</button>
+                </div>
+                <div class="back-next-buttons">
+                    <button class="back" onclick="prevStep()">Back</button>
+                    <button class="next" onclick="calculateCosts()">Calculate</button>
+                </div>
+            </div>
+
+            <!-- Step 8: Costs Results -->
+            <div class="step costs-results" id="step11">
+                <h2>Costs Results</h2>
+                <div id="totalCost"></div>
+                <div class="back-next-buttons">
+                    <button class="back" onclick="prevStep()">Back</button>
+                    <button class="next" id="nextButton" disabled onclick="nextStep()">Next</button>
+                </div>
+            </div>
+
+
+            <div class="step" id="step12">
+                <h2>Enter Your Financial Aid</h2>
+
+                <table class="financial-aid-table">
+                    <thead>
+                        <tr>
+                            <th>Aid</th>
+                            <th>Fall</th>
+                            <th>Winter</th>
+                            <th>Spring</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cal Grant A</td>
+                            <td><input type="number" id="calGrantAFall" value="0" onchange="calculateAidTotals()"></td>
+                            <td><input type="number" id="calGrantAWinter" value="0" onchange="calculateAidTotals()">
+                            </td>
+                            <td><input type="number" id="calGrantASpring" value="0" onchange="calculateAidTotals()">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cal Grant B</td>
+                            <td><input type="number" id="calGrantBFall" value="0" onchange="calculateAidTotals()"></td>
+                            <td><input type="number" id="calGrantBWinter" value="0" onchange="calculateAidTotals()">
+                            </td>
+                            <td><input type="number" id="calGrantBSpring" value="0" onchange="calculateAidTotals()">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>UCSD Grant-In-Aid</td>
+                            <td><input type="number" id="ucsdGrantFall" value="0" onchange="calculateAidTotals()"></td>
+                            <td><input type="number" id="ucsdGrantWinter" value="0" onchange="calculateAidTotals()">
+                            </td>
+                            <td><input type="number" id="ucsdGrantSpring" value="0" onchange="calculateAidTotals()">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>UCSD Pathway</td>
+                            <td><input type="number" id="pathwayFall" value="0" onchange="calculateAidTotals()"></td>
+                            <td><input type="number" id="pathwayWinter" value="0" onchange="calculateAidTotals()"></td>
+                            <td><input type="number" id="pathwaySpring" value="0" onchange="calculateAidTotals()"></td>
+                        </tr>
+                        <tr>
+                            <td>Direct Subsidized Loan</td>
+                            <td><input type="number" id="subsidizedLoanFall" value="0" onchange="calculateAidTotals()">
+                            </td>
+                            <td><input type="number" id="subsidizedLoanWinter" value="0"
+                                    onchange="calculateAidTotals()"></td>
+                            <td><input type="number" id="subsidizedLoanSpring" value="0"
+                                    onchange="calculateAidTotals()"></td>
+                        </tr>
+                        <tr>
+                            <td>Unsubsidized Loan</td>
+                            <td><input type="number" id="unsubsidizedLoanFall" value="0"
+                                    onchange="calculateAidTotals()"></td>
+                            <td><input type="number" id="unsubsidizedLoanWinter" value="0"
+                                    onchange="calculateAidTotals()"></td>
+                            <td><input type="number" id="unsubsidizedLoanSpring" value="0"
+                                    onchange="calculateAidTotals()"></td>
+                        </tr>
+                        <tr>
+                            <td>Other</td>
+                            <td><input type="number" id="otherAidFall" value="0" onchange="calculateAidTotals()"></td>
+                            <td><input type="number" id="otherAidWinter" value="0" onchange="calculateAidTotals()"></td>
+                            <td><input type="number" id="otherAidSpring" value="0" onchange="calculateAidTotals()"></td>
+                        </tr>
+                        <tr>
+                            <th>Total Aid</th>
+                            <th id="totalAidFall">$0</th>
+                            <th id="totalAidWinter">$0</th>
+                            <th id="totalAidSpring">$0</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="back-next-buttons">
+                    <button class="back" onclick="prevStep()">Back</button>
+                    <button class="next" onclick="showFinalResults()">Next</button>
+                </div>
+            </div>
+
+
+            <!-- Step 10: Final Results -->
+            <div class="step final-results" id="step13">
+                <h2>Final Results</h2>
+                <div id="finalCost"></div>
+                <div class="back-next-buttons">
+                    <button class="back" onclick="prevStep()">Back</button>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Report bugs or questions to <a href="mailto:ucsdcalculator@gmail.com">ucsdcalculator@gmail.com</a>. 
+                This is the first (and rushed) version of the site, updates will come soon.</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to your external JavaScript file -->
+    <script>
+        // Function to show the popup
+        function showMobilePopup() {
+            const popup = document.getElementById('mobile-popup');
+            popup.style.display = 'flex'; // Show the popup
+        }
+    
+        // Function to hide the popup when "OK" is clicked
+        document.getElementById('close-popup').addEventListener('click', function() {
+            const popup = document.getElementById('mobile-popup');
+            popup.style.display = 'none'; // Hide the popup
+        });
+    
+        // Detect mobile devices by checking the screen width
+        if (window.innerWidth <= 768) {
+            showMobilePopup();
+        }
+        function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
+
+if (isMobileDevice()) {
+    showMobilePopup();
+}
+    </script>
+    
+    <div id="mobile-popup" class="mobile-popup">
+        <div class="mobile-popup-content">
+            <p>This site works best on desktops. For the best experience, please switch to a desktop device.</p>
+            <button id="close-popup">OK</button>
+        </div>
+    </div>
+    
+</body>
+
+</html>
